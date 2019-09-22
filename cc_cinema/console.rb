@@ -63,7 +63,7 @@ screening2 = Screening.new({
 })
 
 screening3 = Screening.new({
-  'film_id' => film1.id,
+  'film_id' => film2.id,
   'screening_time' => "2019-09-20 20:00:00"
 })
 

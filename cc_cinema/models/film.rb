@@ -54,4 +54,15 @@ end
     end
 
 
+    def all_customers_by_film
+      sql = "SELECT customers.* FROM customers
+            INNER JOIN screenings
+            ON customers.id = screenings.film_id
+            WHERE film_id = $1"
+      values = [@id]
+      customer_arr = SqlRunner.run( sql, values)
+      result = customer_arr.map { |customer| Customer.new( customer ) }
+      return result
+    end
+
 end #class end
