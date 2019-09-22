@@ -103,6 +103,4 @@ ticket3.save
 
 # ticket3.delete
 
-
-binding.pry
-nil
+Film.order_films_by_title

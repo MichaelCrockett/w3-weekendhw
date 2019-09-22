@@ -65,4 +65,12 @@ end
       return result
     end
 
+
+    def Film.order_films_by_title
+      sql = "SELECT * FROM FILMS
+            ORDER BY title ASC"
+      films_in_order = SqlRunner.run(sql)
+      result = films_in_order.map { |film| Film.new( film ) }
+      p result
+    end
 end #class end
